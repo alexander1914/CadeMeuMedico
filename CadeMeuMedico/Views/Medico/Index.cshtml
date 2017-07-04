@@ -1,0 +1,70 @@
+﻿@model IEnumerable<CadeMeuMedico.Models.Medicos>
+
+@{
+    ViewBag.Title = "Médicos";
+}
+
+<div style="width:275px; height:275px;float:left; margin-right:10px;">
+    <img class="responsive-img" src="https://www.doctorsnetwork.com/images/doctors.svg" />
+</div>
+
+<p>
+    <h2>Médicos</h2>
+</p>
+
+<p>
+    @Html.ActionLink("Novo Medico", "Create", null, new { @class = "waves-effect waves-light btn #4caf50 green" })
+
+    @*@Html.ActionLink("Adicionar novo médico", "Adicionar", null, new { id="btnAdicionar" })*@
+</p>
+
+<br />
+<table class="centered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+                <i class="medium material-icons">person_pin</i>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cidades)
+                <i class="medium material-icons">location_on</i>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Especialidades)
+                <i class="medium material-icons">assignment_ind</i>
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidades.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Especialidades.Nome)
+                </td>
+                <td>
+                    <p>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.IDMedico }, new { @class = "waves-effect waves-light btn #1b5e20 green darken-4" })
+                    </p>
+                    <p>
+                        @Html.ActionLink("Perfil", "Details", new { id = item.IDMedico }, new { @class = "waves-effect waves-light btn #03a9f4 light-blue" })
+                    </p>
+                    <p>
+                        @Html.ActionLink("Apagar", "Delete", new { id = item.IDMedico }, new { @class = "waves-effect waves-light btn #e53935 red darken-1" })
+                    </p>
+
+                </td>
+            </tr>
+        </tbody>
+    }
+</table>

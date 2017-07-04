@@ -1,0 +1,103 @@
+﻿@model CadeMeuMedico.Models.Medicos
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h5 id="titulo-formulario">Deletar o Médico</h5>
+
+<h4>Tem certeza que deseja deletar o Médico ?</h4>
+<div>    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cidades.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cidades.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Especialidades.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Especialidades.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CRM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CRM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AtendePorConvenio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AtendePorConvenio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TemClinica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TemClinica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WebsiteBlog)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WebsiteBlog)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="waves-effect waves-light btn #e53935 red darken-1" />
+            &nbsp;
+            @Html.ActionLink("Voltar", "Index", null, new { @class = "btn waves-effect waves-light" })
+        </div>
+    }
+</div>

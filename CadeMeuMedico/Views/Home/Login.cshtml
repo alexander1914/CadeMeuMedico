@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+    <h2>Área Administrativa</h2>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/CSS/Medico/Login.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+</head>
+<body>
+    <div class="section"></div>
+    <main>
+        <center>
+            <img class="responsive-img" id="bannerLogin" src="https://www.doctorsnetwork.com/images/doctors.svg"/>
+            <div class="section"></div>
+
+            <h5 class="indigo-text">Faça seu login</h5>
+            <div id="status"></div>
+            <div class="section"></div>            
+            <div class="container">
+                <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+
+                    <form id="form-login" name="form-login"
+                          class="col s12" method="get"
+                          action="javascript:function()">
+                        <div class="row">
+                            <div class="col s12">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="txtLogin">Login</label>
+                                <input class="validate" type="text" id="txtLogin" name="txtLogin" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="txtSenha">Senha</label>
+                                <input class="validate" type="password" id="txtSenha" name="txtSenha" />
+                            </div>
+                            <label style="float: right;">
+                                <a class="pink-text" href="#!"><b>Esqueceu sua senha?</b></a>
+                            </label>
+                        </div>
+
+                        <br />
+                        <center>
+                            <div class="row">
+                                <button type="submit" id="botao-entrar" name="botao-entrar" class="col s12 btn btn-large waves-effect indigo">Entrar</button>
+                            </div>
+                        </center>
+                    </form>
+                </div>
+            </div>
+            
+        </center>
+
+        <div class="section"></div>
+        <div class="section"></div>
+    </main>
+
+    <script type="text/javascript" src="~/Scripts/jquery-2.0.2.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/materialize.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/Login.Home.js"></script>
+</body>
+
+</html>

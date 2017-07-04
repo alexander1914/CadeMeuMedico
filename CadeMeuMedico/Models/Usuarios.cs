@@ -1,0 +1,18 @@
+namespace CadeMeuMedico.Models
+{
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
+    public partial class Usuarios
+    {
+        [Key]
+        public long IDUsuario { get; set; }
+        public string Nome { get; set; }
+        public string Login { get; set; }
+        public string Senha { get; set; }
+        public string Email { get; set; }
+    }
+}

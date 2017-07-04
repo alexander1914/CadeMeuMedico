@@ -1,0 +1,97 @@
+﻿@model CadeMeuMedico.Models.Medicos
+
+@{
+    ViewBag.Title = "Perfil";
+}
+
+<h5 id="titulo-formulario">Perfil Médico</h5>
+
+<div>    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cidades.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cidades.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Especialidades.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Especialidades.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CRM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CRM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AtendePorConvenio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AtendePorConvenio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TemClinica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TemClinica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WebsiteBlog)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WebsiteBlog)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IDMedico }, new { @class= "waves-effect waves-light btn #1b5e20 green darken-4" })
+        &nbsp;
+    @Html.ActionLink("Voltar", "Index", null, new { @class = "btn waves-effect waves-light" })
+</p>

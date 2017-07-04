@@ -1,0 +1,11 @@
+﻿@charset "UTF-8";
+
+h5#titulo-formulario{
+    text-align:center;
+}
+nav#menu {
+    background-color: #64b5f6;
+}
+footer#rodape {
+    background-color: #64b5f6;
+}
